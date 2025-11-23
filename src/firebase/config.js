@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
+import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,5 +18,10 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firestore and Auth
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+
+// Set auth persistence to keep users logged in
+setPersistence(auth, browserLocalPersistence).catch((error) => {
+  console.error('Auth persistence error:', error);
+});
 
 export default app;
