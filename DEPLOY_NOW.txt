@@ -1,0 +1,55 @@
+🚀 DEPLOY KOWA HIGH SCHOOL FEE SYSTEM
+
+IMPORTANT: DO NOT upload node_modules folder!
+This is CORRECT - Vercel installs it automatically.
+
+STEP 1: GitHub Repository
+=========================
+1. Go to: https://github.com
+2. Click: "New repository" 
+3. Name: kowa-high-school-fee-payment
+4. Set: Public
+5. Click: "Create repository"
+
+STEP 2: Upload ONLY Source Files
+================================
+Upload these files (node_modules will NOT upload - this is correct):
+
+✅ Core Files:
+- package.json (UPDATED VERSION)
+- vercel.json (UPDATED VERSION)
+- .gitignore
+- README.md
+
+✅ Public Folder:
+- public/index.html
+- public/manifest.json
+- public/sw.js
+
+✅ Source Code:
+- src/index.js
+- src/App.js
+- src/context/AuthContext.js
+- src/utils/mockData.js
+- src/pages/Login.js
+- src/pages/StudentDashboard.js
+- src/pages/AdminDashboard.js
+- src/styles/App.css
+- src/styles/Login.css
+- src/styles/Dashboard.css
+
+STEP 3: Deploy to Vercel
+========================
+1. Go to: https://vercel.com
+2. Sign up with GitHub
+3. Import your repository
+4. Framework: Create React App
+5. Click "Deploy"
+
+If build fails, set in Vercel:
+- Build Command: npm ci && npm run build
+- Output Directory: build
+- Node.js Version: 18.x
+
+RESULT: Live school fee system!
+Admin: admin@kowahs.edu.ng / KowaHS@2024!Admin
